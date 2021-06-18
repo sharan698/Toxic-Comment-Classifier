@@ -1,7 +1,7 @@
 gunicorn
 numpy
 pandas
-Flask
+flask
 Jinja2
 scikit-learn
 keras-preprocessing
@@ -10,3 +10,4 @@ requests
 json5
 matplotlib
 notebook
+scipy
