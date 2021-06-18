@@ -7,3 +7,4 @@ predictions filter=lfs diff=lfs merge=lfs -text
 sample_submission filter=lfs diff=lfs merge=lfs -text
 sharan.ipynb filter=lfs diff=lfs merge=lfs -text
 test.csv filter=lfs diff=lfs merge=lfs -text
+train.csv filter=lfs diff=lfs merge=lfs -text
