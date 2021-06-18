@@ -1,7 +1,6 @@
 gunicorn
 numpy
 pandas
-flask
 Jinja2
 scikit-learn
 keras-preprocessing
