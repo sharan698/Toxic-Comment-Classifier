@@ -1,6 +1,7 @@
 gunicorn
 numpy
 Flask
+setuptools
 pandas
 Jinja2
 scikit-learn
