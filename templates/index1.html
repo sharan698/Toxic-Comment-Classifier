@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictions Section</title>
+    <style>
+        body{
+            background-image: url("https://ichef.bbci.co.uk/news/976/cpsprodpb/15BD7/production/_115374098_social_media_logos.jpg");
+            background-repeat: no-repeat;
+            background-attachment:fixed;
+            background-size: cover;            
+        }
+        *{
+            box-sizing: border-box;
+        }
+        .back-nav{
+            background-color:#eeeeee;
+            margin-top: 0;
+        }
+        .heading{
+            color:black;
+            display: inline-block;
+        }
+        .hhome{
+            float:right;
+            color:black;
+            list-style-type: none;
+            text-decoration: none;
+            display: inline-block;
+            padding-right: 25px;
+        }                   
+        .habout{
+            float:right;
+            color:black;
+            list-style-type: none;
+            display: inline-block;
+            padding-right: 25px;
+            
+        }
+        .hmake{
+            float:right;
+            color:black;
+            list-style-type: none;
+            display: inline-block;
+            padding-right: 25px;
+            
+        }
+        .container{
+            padding: 20px;
+            background-color: #eeeeee;
+            color: black;
+            display:grid;
+            place-items: center;
+            width:35%;
+            margin:auto;
+        }
+        .button{
+            background-color: #962d2d;
+            border-radius: 20%;
+            color:white;
+            cursor:pointer;
+        }
+        a:visited{
+            color: black;
+
+        }
+        a:hover{
+            color: #962d2d;
+        }
+    </style>
+</head>
+<body>
+    <nav class="back-nav">
+        <ul>
+            <li class="heading"><h1>Toxic Comment Classification</h1></li>
+            <li class="hmake"><h1><a href="{{url_for('index')}}" style="text-decoration: none">Make Predictions</a></h1></li>
+            <li class="habout"><h1><a href="{{url_for('about')}}" style="text-decoration: none">About The Project</a></h1></li>
+            <li class="hhome"><h1><a href="{{url_for('home')}}" style="text-decoration: none">Home</a></h1></li>
+        </ul>
+    </nav>
+    <form action="{{ url_for('y_predict')}}" method="POST">
+    <div align="center" class="container"> 
+        <p>
+        <img src="https://img.icons8.com/emoji/50/000000/face-with-symbols-on-mouth.png"/>
+        <img src="https://img.icons8.com/emoji/50/000000/angry-face-with-horns.png"/>
+        <img src="https://img.icons8.com/fluent/48/000000/angry.png"/>        
+        <img src="https://img.icons8.com/emoji/50/000000/smiling-face-with-smiling-eyes.png"/>
+        <img src="https://img.icons8.com/fluent/48/000000/smiling.png"/>
+        <img src="https://img.icons8.com/emoji/50/000000/smiling-face-with-heart-eyes.png"/></p>
+        <input type="text" name="comment" placeholder="Type Your Comment Here..." required="required" autocomplete="off"/>
+        <br>
+        <br>
+        <button type="submit" class="button"><h2>Predict</h2></button>
+        <br>
+        <br>
+        {{ pred_text1 }}
+        <br/>
+        {{ pred_text2 }}
+        <br/>
+        {{ pred_text3 }}
+        <br/>
+        {{ pred_text4 }}
+        <br/>
+        {{ pred_text5 }}
+        <br/>
+        {{ pred_text6 }}
+        <br/>
+    </div>
+    </form>
+</body>
+</html>

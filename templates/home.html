@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body{
+            background-image: url("https://ichef.bbci.co.uk/news/976/cpsprodpb/15BD7/production/_115374098_social_media_logos.jpg");
+            background-repeat: no-repeat;
+            background-attachment:fixed;
+            background-size: cover;
+            }
+        .back-nav{
+            background-color:#eeeeee;
+            margin-top: 0;
+        }
+        .heading{
+            color:black;
+            display: inline-block;
+        }
+        .hhome{
+            float:right;
+            color:black;
+            list-style-type: none;
+            text-decoration: none;
+            display: inline-block;
+            padding-right: 20px;
+        }                   
+        .habout{
+            float:right;
+            color:black;
+            list-style-type: none;
+            display: inline-block;
+            padding-right: 20px;
+        }
+        .hmake{
+            float:right;
+            color:black;
+            list-style-type: none;
+            display: inline-block;
+            padding-right: 20px;
+      }
+      .container{
+          position:absolute;
+          top:50%;
+          left:50%;
+          color: black;
+          transform: translate(-50%,-50%);
+          background-color:#eeeeee;
+      }
+        a:visited{
+            color: black;
+
+        }
+        a:hover{
+            color: #962d2d;
+        }
+    </style>
+</head>
+<body>
+    <nav class="back-nav">
+        <ul>
+            <li class="heading"><h1>Toxic Comment Classification</h1></li>
+            <li class="hmake"><h1><a href="{{url_for('index')}}" style="text-decoration: none">Make Predictions</a></h1></li>
+            <li class="habout"><h1><a href="{{url_for('about')}}" style="text-decoration: none">About The Project</a></h1></li>
+            <li class="hhome"><h1><a href="{{url_for('home')}}" style="text-decoration: none">Home</a></h1></li>
+        </ul>
+    </nav>    
+    <div class="container">
+        <h2 style="opacity: 0.9;">
+            <pre>
+            Hello hope your are doing well 😀 Welcome to our website.
+
+            Everyone loves social media these days.
+            The flow of data over the internet has grown dramatically, especially with the appearance 
+            of social networking sites. We have developed a project which focuses on the comments
+            given on these social networking platforms.
+        </pre></h2>
+    </div>
+</body>
+</html>
