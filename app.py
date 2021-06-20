@@ -15,7 +15,7 @@ from tensorflow import keras
 app = Flask(__name__)
 model = keras.models.load_model('newmodel.h5')
 tks = load('newtokens.save')
-@app.route('/', methods=['GET'])
+@app.route('/', methods=['GET','POST'])
 def home():
     return render_template('home.html')
 
@@ -61,4 +61,4 @@ def predict_api():
     return jsonify(output)'''
 
 if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0', port=9696)  
+    app.run(debug=True, host='0.0.0.0', port=8080)  
